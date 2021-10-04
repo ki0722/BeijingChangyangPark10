@@ -66,34 +66,123 @@ nav {
   background:linear-gradient(to top,#000055,#000033);
 }
 
-#con{
+
+#button {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+}
+#button a {
+  color:#FFF;
+}
+#button img {
+  cursor: pointer;
+  width: 1.8rem;
+}
+
+
+
+
+
+
+
+#con  {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  width: 100%;
+  position: absolute;
+  top: 5rem;
+  background-color: #444;
+  box-shadow: 0 4px 0.3125rem rgba(0,0,0,.3);
+  opacity: 0.85;
 }
-
-#con li{
-  margin-right: 2vw;
+#con  li {
+  width: 100%;
+  border-bottom: 1px solid #777;
+  list-style-type: none;
+  font-size: 80%;
 }
-
-#con li:hover{
-  background-color: white;
+#con li:last-child {
+  border-bottom: none;
 }
-
-#con li a {
-  color: white;
+#con  a {
+  display: block;
+  padding: 1rem 0;
+  color: #FFF;
+  text-decoration: none;
+  text-align: center;
 }
-
-#con li a:hover {
-  color: red;
+#con  a:hover {
+  background: #222;
 }
-
-/**************** MAIN ***********/
 
 main {
-  display: flex;
-  flex-wrap：wrap;
+  background:#FFFFFF;
   justify-content:space-between;
 }
+
+
+
+
+
+
+
+/*-------------------------------
+      LAYOUT PC (OverWrite)
+--------------------------------*/
+
+@media only screen and (min-width: 769px) {
+
+  header {
+    height: 7rem;
+  }
+
+  #logo {
+    top: 0.8rem;
+    left: 15%;
+    width: 90px;
+  }
+
+  header h1 {
+    top: 2.5rem;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  #con {
+    flex-direction: row;
+    justify-content: space-between;
+    top: 7rem;
+    left: 0;
+  }
+  #con li {
+    flex:1;
+    border-bottom: none;
+    border-right: 1px solid #777;
+  }
+  #con li:last-child {
+    border-right: none;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*** SECTION ****/
