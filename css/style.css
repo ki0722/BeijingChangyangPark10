@@ -67,18 +67,6 @@ nav {
 }
 
 
-#button {
-  position: absolute;
-  top: 1.5rem;
-  right: 2rem;
-}
-#button a {
-  color:#FFF;
-}
-#button img {
-  cursor: pointer;
-  width: 1.8rem;
-}
 
 
 
