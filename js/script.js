@@ -1,49 +1,27 @@
-// buttonSet1
-$( function() {
+// Window幅に応じたメニュー表示の変更
+function ShowAndHide(win){
+  if(win < 769){
+    $("#button").show();
+    $("#lists").hide();
+  }else{
+    $("#button").hide();
+    $("#lists").show();
+  }
+}
 
-  $( '#buttonHeader' ).click( function() {
-    $( 'h1' ).text( 'Hello jQuery!' );
+$( function(){
+
+  // 初めてページを開いた時の状態チェック
+  ShowAndHide($(window).width());
+
+  // Windowサイズが変更された時の状態チェック
+  $(window).resize(function(){
+    ShowAndHide($(window).width());
   });
 
-  $( '#buttonArticle' ).click( function() {
-    $( 'article' ).css({
-      'color': 'white',
-      'background-color': 'red'
-    });
+  // メニューボタンクリック時のトグル動作
+  $("#button").click( function () {
+    $("#lists").slideToggle();
   });
 
-  $( '#buttonFooter' ).click( function() {
-    $( 'footer' ).html('<p><a href="https://www.kyusan-u.ac.jp">Kyushu Sangyo University</a></p>' );
-    $( 'footer a' ).css( 'color','red' );
-  });
-
-});
-
-// buttonSet2
-$( function() {
-
-  $( '#buttonNormal' ).click( function() {
-    $('main').css( 'flex-direction','row' );
-  });
-
-  $( '#buttonReverse' ).click( function() {
-    $('main').css( 'flex-direction','row-reverse' );
-  });
-
-  $( '#buttonVertical' ).click( function() {
-    $('main').css( 'flex-direction','column' );
-  });
-
-});
-
-
-
-
-
-$(function(){
-   $('.slider').bxSlider({
-      auto:true,
-      speed:1000,
-      pager:true
-   });
 });
