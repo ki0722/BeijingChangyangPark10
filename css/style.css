@@ -33,10 +33,29 @@ header {
   box-shadow: 0 4px 0.3125rem rgba(0,0,0,.3);
 }
 
+
+#button {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+}
+#button a {
+  color:#FFF;
+}
+#button img {
+  cursor: pointer;
+  width: 1.8rem;
+}
+
+
+
+
+
+
 header img {
   position: absolute;
-  top: 2rem;
-  left: 0rem;
+  top: 1.5rem;
+  left: 0.2rem;
   width:90px;
 }
 
@@ -62,17 +81,9 @@ header h3{
 /************** NAVIGATION ***********/
 
 nav {
-  padding: 1rem 3rem ;
+  padding: 1rem 0rem ;
   background:linear-gradient(to top,#000055,#000033);
 }
-
-
-
-
-
-
-
-
 
 #con  {
   display: flex;
@@ -104,16 +115,37 @@ nav {
   background: #222;
 }
 
+
+
 main {
-  background:#FFFFFF;
-  justify-content:space-between;
+  display: flex;
+  flex-direction: column;
+}
+article {
+  padding: 2rem;
+  text-align: justify;
+  font-size: 0.85rem;
+  background-color: white;
+}
+aside {
+  padding: 2rem;
+  text-align: left;
+  font-size: 0.85rem;
+  background-color: #EEE;
+}
+article h1,
+article p,
+aside h1,
+aside p {
+  margin-bottom: 1rem;
 }
 
-
-
-
-
-
+footer {
+  padding: 1.5rem;
+  text-align: center;
+  background-color: #333;
+  color:white;
+}
 
 /*-------------------------------
       LAYOUT PC (OverWrite)
@@ -124,16 +156,9 @@ main {
   header {
     height: 7rem;
   }
-
-  #logo {
-    top: 0.8rem;
-    left: 15%;
-    width: 90px;
-  }
-
   header h1 {
     top: 2.5rem;
-    left: 0;
+    left: 0rem;
     width: 100%;
     text-align: center;
     font-size: 1.5rem;
@@ -155,6 +180,56 @@ main {
   }
 
 
+/*-------------------------------
+      LAYOUT PC (OverWrite)
+--------------------------------*/
+
+@media only screen and (min-width: 769px) {
+
+  header {
+    height: 7rem;
+  }
+  header h1 {
+    top: 2.5rem;
+    left: 0rem;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  #con {
+    flex-direction: row;
+    justify-content: space-between;
+    top: 9rem;
+    left: 0;
+  }
+  #con li {
+    flex:1;
+    border-bottom: none;
+    border-right: 1px solid #777;
+  }
+  #con li:last-child {
+    border-right: none;
+  }
+
+
+
+  main {
+    flex-direction: row;
+    margin-top: 3rem;
+  }
+  article {
+    flex: 3;
+    padding: 3rem;
+    font-size: 1rem;
+  }
+  aside {
+    flex: 1;
+    padding: 3rem;
+    font-size: 1rem;
+  }
+
+}
 
 
 
@@ -171,6 +246,16 @@ main {
 
 
 
+
+
+
+/**************** MAIN ***********/
+
+main {
+  display: flex;
+  flex-wrap：wrap;
+  justify-content:space-between;
+}
 
 
 /*** SECTION ****/
